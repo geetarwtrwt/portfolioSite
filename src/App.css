@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .common-btn {
+    padding: 13px 30px !important;
+    position: relative;
+    padding-right: 70px !important;
+    color: white !important;
+    border: 0.5px solid #fa5b0f !important;
+    border-radius: 30px !important;
+    letter-spacing: 1.2px !important;
+    font-weight: bolder !important;
+    overflow: hidden;
+    transition: 0.5s all ease;
+  }
+
+  .common-btn::after {
+    content: "";
+    position: absolute;
+    background: #fa5b0f !important;
+    top: 0px;
+    right: 0px;
+    height: 100%;
+    width: 0%;
+    position: absolute;
+    transition: 0.5s all ease;
+    z-index: -1;
+  }
+
+  .common-btn:hover::after {
+    width: 100% !important;
+  }
+  .common-btn:hover {
+    background: #fa5b0f !important;
+  }
+
+  .common-btn .icon {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background: #fa5b0f;
+    height: 51px;
+    width: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .titleBg {
+    position: absolute;
+    left: 50%;
+    top: -20px;
+    transform: translateX(-50%);
+    font-weight: bolder;
+    color: rgba(255, 255, 255, 0.09);
+    font-size: 120px;
+    @apply max-sm:text-8xl max-xs:text-6xl max-xs:top-[-10px];
+  }
+}
+
+@layer components {
+  .container {
+    @apply py-10 px-6 md:p-16 lg:p-12 xl:px-20 xl:py-16 2xl:px-20 2xl:py-16 w-full mx-auto;
+  }
+
+  header ul li {
+    @apply !relative;
+  }
+
+  header ul li button.common-btn {
+    @apply !w-[50px] !h-[50px] !min-w-[50px] !p-0 !border-0 absolute right-0 top-0 duration-[0.8s] transition-all;
+  }
+
+  header ul li button.common-btn:hover {
+    @apply !w-[160px];
+  }
+
+  header ul li .title {
+    @apply invisible opacity-0 pr-10 whitespace-nowrap duration-[1s] font-bold;
+  }
+
+  header ul li button.common-btn:hover .title {
+    @apply visible opacity-100;
+  }
+  .experienceWork .box {
+    @apply flex gap-8 mb-16 max-md:mb-8 max-md:gap-4;
+  }
+
+  .experienceWork .box h4 {
+    @apply text-lg font-semibold uppercase;
+  }
+  .experienceWork .box h4 span {
+    @apply text-base text-white6;
+  }
+  .experienceWork .box p {
+    @apply text-white6 text-justify indent-[40px];
+  }
+  .experienceWork .box .icon {
+    @apply text-white bg-white6 flex justify-center items-center rounded-full !w-[40px] !h-[40px]   relative duration-500 transition-all;
+  }
+  .experienceWork .box .icon::after {
+    content: "";
+    @apply absolute bg-white6 h-full w-[2px] -bottom-full;
+  }
+  .experienceWork .box:hover .icon,
+  .experienceWork .box:hover .icon::after {
+    @apply bg-mainColor;
+  }
+  .portfolioBtnRow button {
+    @apply py-2 px-8 bg-transparent border-2 border-white font-semibold text-white rounded-lg max-md:px-4 max-md:py-1 max-xs:px-2;
+  }
+  button.activeFilterBtn {
+    @apply bg-mainColor;
+  }
+
+  .contactForm form input,
+  .contactForm form textarea {
+    @apply w-full px-3 py-0 rounded-lg h-[45px] outline-none border-0 font-semibold bg-zinc-800;
+  }
+  .contactForm form textarea {
+    @apply h-[150px] p-2;
+  }
+  .contactForm form ::placeholder {
+    @apply text-white6 uppercase;
+  }
+}
