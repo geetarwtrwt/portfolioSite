@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import LinkIcon from "@mui/icons-material/Link";
-import img1 from "../../public/portfolilo/1.png";
-import img2 from "../../public/portfolilo/2.png";
-import img3 from "../../public/portfolilo/3.png";
-import img4 from "../../public/portfolilo/4.png";
-import img5 from "../../public/portfolilo/5.png";
-import img6 from "../../public/portfolilo/6.png";
+import img1 from "../assets/portfolilo/1.png";
+import img2 from "../assets/portfolilo/2.png";
+import img3 from "../assets/portfolilo/3.png";
+import img4 from "../assets/portfolilo/4.png";
+import img5 from "../assets/portfolilo/5.png";
+import img6 from "../assets/portfolilo/6.png";
 import { motion } from "framer-motion";
 import { parent, up } from "../assets/framer";
 

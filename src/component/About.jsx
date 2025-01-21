@@ -1,5 +1,5 @@
 import React from "react";
-import cv from "../../public/GeetaRawatCV.pdf";
+import cv from "../assets/GeetaRawatCV.pdf";
 import { Link } from "react-router-dom";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
 import BusinessCenterIcon from "@mui/icons-material/BusinessCenter";
@@ -9,16 +9,16 @@ import SchoolIcon from "@mui/icons-material/School";
 import { motion } from "framer-motion";
 import { parent, opacityLeft, up } from "../assets/framer";
 
-import html from "../../public/skill/html.png";
-import css from "../../public/skill/css.png";
-import js from "../../public/skill/js.png";
-import react from "../../public/skill/react.png";
-import bootstrap from "../../public/skill/bootstrap.png";
-import tailwind from "../../public/skill/tailwind2.png";
-import framerMotion from "../../public/skill/framerMotion.png";
-import github from "../../public/skill/github.png";
-import gsap from "../../public/skill/gsap1.png";
-import swiper from "../../public/skill/swiper.png";
+import html from "../assets/skill/html.png";
+import css from "../assets/skill/css.png";
+import js from "../assets/skill/js.png";
+import react from "../assets/skill/react.png";
+import bootstrap from "../assets/skill/bootstrap.png";
+import tailwind from "../assets/skill/tailwind2.png";
+import framerMotion from "../assets/skill/framerMotion.png";
+import github from "../assets/skill/github.png";
+import gsap from "../assets/skill/gsap1.png";
+import swiper from "../assets/skill/swiper.png";
 function About() {
   let skills = [
     { id: 0, url: html, label: "HTML" },
@@ -188,13 +188,13 @@ function About() {
                   </span>
                 </div>
                 <div className="right">
-                  <span className="badge badge-default">2023</span>
+                  <span className="badge badge-default">2023 - Present</span>
                   <h4 className="my-3">
                     Full Stack Developer- <span>Dice Academy</span>
                   </h4>
                   <p>
-                    Completed my Master’s in Hindi from IGNOU. This degree
-                    enhanced my understanding of Hindi language and literature.
+                    Currently pursuing a Full Stack Development Course from Dice
+                    Academy
                   </p>
                 </div>
               </motion.div>

@@ -1,6 +1,6 @@
 import React from "react";
-import cv from "../../public/GeetaRawatCV.pdf";
-import myImg from "../../public/me/3.jpg";
+import cv from "../assets/GeetaRawatCV.pdf";
+import myImg from "../assets/me/3.jpg";
 import { Link } from "react-router-dom";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import FileDownloadIcon from "@mui/icons-material/FileDownload";
@@ -60,7 +60,7 @@ function Home() {
             className="flex"
           >
             <Link to="/about">
-              <button className="capitalize border-[0.5px] py-2 px-6 rounded-full border-mainColor max-xs:px-2.5 max-xs:text-sm">
+              <button className="capitalize border-[0.5px] py-2 px-6 rounded-full border-mainColor max-xs:px-2.5 max-xs:text-sm hover:bg-mainColor duration-500">
                 More about me
                 <span className="icon">
                   <ChevronRightIcon />
@@ -68,7 +68,7 @@ function Home() {
               </button>
             </Link>
             <Link to={cv} target="_blank" download>
-              <button className="border-[0.5px] py-2 px-6 rounded-full border-mainColor ms-4 max-xs:px-2.5 max-xs:text-sm">
+              <button className="border-[0.5px] py-2 px-6 rounded-full border-mainColor ms-4 max-xs:px-2.5 max-xs:text-sm hover:bg-mainColor duration-500">
                 Download CV
                 <span className="icon">
                   <FileDownloadIcon />

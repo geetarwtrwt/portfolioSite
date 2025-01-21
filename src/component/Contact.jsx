@@ -7,6 +7,8 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import { IoIosSend } from "react-icons/io";
 import { FaFacebookF } from "react-icons/fa6";
 import "react-toastify/dist/ReactToastify.css";
+import { motion } from "framer-motion";
+import { opacityLeft, right } from "../assets/framer";
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -54,7 +56,12 @@ function Contact() {
           </h1>
 
           <div className="my-24 flex gap-16 max-lg:flex-wrap max-lg:mb-0">
-            <div className="w-[40%] space-y-6 max-lg:w-[100%]">
+            <motion.div
+              initial="offscreen"
+              whileInView="onscreen"
+              variants={opacityLeft}
+              className="w-[40%] space-y-6 max-lg:w-[100%]"
+            >
               <h2 className="uppercase font-bold text-3xl">dont be shy !</h2>
               <p className="">
                 Feel free to get in touch with me. I always open to discussing
@@ -107,8 +114,13 @@ function Contact() {
                   </a>
                 </li>
               </ul>
-            </div>
-            <div className="w-[60%] contactForm  max-lg:w-[100%]">
+            </motion.div>
+            <motion.div
+              initial="offscreen"
+              whileInView="onscreen"
+              variants={right}
+              className="w-[60%] contactForm  max-lg:w-[100%]"
+            >
               <form onSubmit={onSubmit} className="w-full">
                 <div className="flex gap-4 max-sm:flex-col">
                   <div className="">
@@ -166,7 +178,7 @@ function Contact() {
                   </span>
                 </Button>
               </form>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
